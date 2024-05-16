@@ -3,7 +3,7 @@ import axios from "axios";
 import queryString from "query-string";
 import navHook from "./nav";
 import '../Style/filter.css';
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 class Filter extends React.Component{
     constructor(){
         super();
