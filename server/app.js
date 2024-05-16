@@ -7,7 +7,7 @@ const passport = require("passport");
 const cookieSession=require("cookie-session");
 const paypalRoute = require("./Controller/payment");
 const PORT = 5500;
-const HOSTNAME = "localhost";
+// const HOSTNAME = "localhost";
 
 const authRoute = require("./Controller/auth");
 const passportSetup = require("./Controller/passport");
@@ -35,12 +35,10 @@ app.use('/auth', authRoute)
 const MongoAtlas = process.env.MONGO_URL;
 
 mongoose.connect(MongoAtlas, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
 })
     .then(res => {
-        app.listen(PORT, HOSTNAME, () => {
-            console.log(`Server is running at ${HOSTNAME}: ${PORT}`)
+        app.listen(PORT,  () => {
+            console.log(`Server is running at ${PORT}`)
         });
     })
     .catch(err => console.log(err));
