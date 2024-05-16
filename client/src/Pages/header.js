@@ -2,6 +2,7 @@ import React from "react";
 import Modal from 'react-modal';
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
+// ui
 
 const customStyles = {
     overlay:{
