@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from 'react-modal';
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+// const BASE_URL = window.env.REACT_APP_BASE_URL;
+const BASE_URL = "https://zomatofinalproduct.onrender.com";
 
 const customStyles = {
     overlay:{

@@ -3,7 +3,8 @@ import axios from "axios";
 import queryString from "query-string";
 import navHook from "./nav";
 import '../Style/filter.css';
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+// const BASE_URL = window.env.REACT_APP_BASE_URL;
+const BASE_URL = "https://zomatofinalproduct.onrender.com";
 class Filter extends React.Component{
     constructor(){
         super();

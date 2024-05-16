@@ -1,7 +1,9 @@
 import React from "react";
 import axios from "axios";
 import navHook from "./nav";
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+// const BASE_URL = "https://zomatofinalproduct.onrender.com";
 class Banner extends React.Component{
     constructor(){
         super();
