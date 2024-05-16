@@ -5,7 +5,7 @@ import Details from "./details";
 import Homepage from "./home"
 import Filter from "./filter";
 
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const Router = () => {
 
