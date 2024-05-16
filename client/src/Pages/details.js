@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import '../Style/details.css';
 
-const BASE_URL = "https://zomatofinalproduct.onrender.com";
+const BASE_URL = window.env.REACT_APP_BASE_URL;
 
 const customStyles = {
     overlay:{
