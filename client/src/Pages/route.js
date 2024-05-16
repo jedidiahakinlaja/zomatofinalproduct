@@ -5,7 +5,8 @@ import Details from "./details";
 import Homepage from "./home"
 import Filter from "./filter";
 
-const BASE_URL = "https://zomatofinalproduct.onrender.com";
+// const BASE_URL = window.env.REACT_APP_BASE_URL;
+// const BASE_URL ="https://zomatofinalproduct.onrender.com";
 
 const Router = () => {
 
@@ -13,7 +14,7 @@ const Router = () => {
 
     useEffect(() => {
         const getUser = () => {
-            fetch(`${BASE_URL}/auth/login/success`, {
+            fetch("https://zomatofinalproduct.onrender.com/auth/login/success", {
                 method: "GET",
                 credentials: "include",
                 headers: {
