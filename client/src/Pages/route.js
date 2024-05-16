@@ -14,7 +14,7 @@ const Router = () => {
 
     useEffect(() => {
         const getUser = () => {
-            fetch("https://zomatofinalproduct.onrender.com/auth/login/success", {
+            fetch('https://zomatofinalproduct.onrender.com/auth/login/success', {
                 method: "GET",
                 credentials: "include",
                 headers: {
