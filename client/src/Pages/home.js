@@ -5,8 +5,8 @@ import axios from "axios";
 import Modal from 'react-modal';
 import '../Style/home.css';
 
-// const BASE_URL = window.env.REACT_APP_BASE_URL;
-const BASE_URL ="https://zomatofinalproduct.onrender.com";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
+// const BASE_URL ="https://zomatofinalproduct.onrender.com";
 
 const customStyles = {
     overlay:{
