@@ -13,7 +13,7 @@ const authRoute = require("./Controller/auth");
 const passportSetup = require("./Controller/passport");
 
 const corsOptions={
-    origin: "http://localhost:3000",
+    origin: process.env.REACT_URL,
     methods: "GET,POST,PUT,DELETE, PATCH",
     credentials: true,
     optionSuccessStatus: 200,
