@@ -16,9 +16,13 @@ const Router = () => {
     useEffect(() => {
         const getUser = () => {
             axios({
-                url: `http://zomatofinalproduct.onrender.com/auth/login/success`,
+                url: `https://zomatofinalproduct.onrender.com/auth/login/success`,
                 method: 'GET',
-                headers: { 'Content-Type': 'application/JSON'}
+                headers: { 'Content-Type': 'application/JSON'},
+                withCredentials:true,
+                optionSuccessStatus: 200,
+                origin:'*'
+
             })
             .then((response) => {
                 if(response.status === 200) return response.json();
