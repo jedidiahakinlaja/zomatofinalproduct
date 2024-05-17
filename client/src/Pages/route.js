@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState,useEffect } from "react";
+import axios from "axios";
 import Header from "./header";
 import Details from "./details";
 import Homepage from "./home"
@@ -14,14 +15,10 @@ const Router = () => {
 
     useEffect(() => {
         const getUser = () => {
-            fetch('https://zomatofinalproduct.onrender.com/auth/login/success', {
-                method: "GET",
-                credentials: "include",
-                headers: {
-                    Accept: "application/JSON",
-                    "Content-Type": "application/JSON",
-                    "Access-Control-Allow-Credentials": true
-                }
+            axios({
+                url: `https://zomatofinalproduct.onrender.com/auth/login/success`,
+                method: 'GET',
+                headers: { 'Content-Type': 'application/JSON'}
             })
             .then((response) => {
                 if(response.status === 200) return response.json();
