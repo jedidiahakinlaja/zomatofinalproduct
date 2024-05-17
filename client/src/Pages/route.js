@@ -6,8 +6,8 @@ import Details from "./details";
 import Homepage from "./home"
 import Filter from "./filter";
 
-// const BASE_URL = window.env.REACT_APP_BASE_URL;
-// const BASE_URL ="https://zomatofinalproduct.onrender.com";
+ const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 
 const Router = () => {
 
@@ -15,14 +15,14 @@ const Router = () => {
 
     useEffect(() => {
         const getUser = () => {
-            axios({
-                url: 'https://zomatofinalproduct.onrender.com/auth/login/success',
-                method: 'GET',
-                headers: { 'Content-Type': 'application/JSON'},
-                withCredentials:true,
-                optionSuccessStatus: 200,
-                origin: 'https://zomatofinalproduct.onrender.com'
-
+            fetch(`${BASE_URL}/auth/login/success`, {
+                method: "GET",
+                credentials: "include",
+                headers: {
+                    Accept: "application/JSON",
+                    "Content-Type": "application/JSON",
+                    "Access-Control-Allow-Credentials": true
+                }
             })
             .then((response) => {
                 if(response.status === 200) return response.json();
